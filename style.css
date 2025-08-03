@@ -1,6 +1,14 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
-    --primary-blue: #3b82f6;
-    --primary-purple: #8b5cf6;
+    /* Color Palette */
+    --primary-blue: #1e3a8a;
+    --primary-purple: #7c3aed;
     --primary-teal: #0891b2;
     --accent-orange: #f97316;
     --accent-pink: #ec4899;
@@ -159,7 +167,6 @@ body {
     transition: var(--transition-fast);
 }
 
-
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -185,6 +192,11 @@ body {
     font-size: var(--font-size-4xl);
     margin-bottom: var(--spacing-md);
     line-height: 1.2;
+}
+
+/* CV Download Button Styles */
+.hero-cv {
+    margin-top: var(--spacing-lg);
 }
 
 .gradient-text {
@@ -265,7 +277,6 @@ body {
     height: 100%;
     object-fit: cover;
 }
-
 
 /* About Section */
 .about {
@@ -499,6 +510,7 @@ body {
 .timeline-info p {
     color: var(--gray-600);
 }
+
 /* Projects Section */
 .projects {
     padding: var(--spacing-3xl) 0;
@@ -693,6 +705,7 @@ body {
     min-height: 150px;
     resize: vertical;
 }
+
 /* Footer */
 .footer {
     background: var(--gray-900);
