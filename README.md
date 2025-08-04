@@ -1,6 +1,6 @@
 # Ivy Atieng - Portfolio Website
 
-![Portfolio Screenshot](./screenshot.jpg) *[Add screenshot of your portfolio]*
+ 
 
 ## 🚀 Overview
 A modern, responsive portfolio website showcasing my skills as a Data Scientist and AI Developer. Built with pure HTML and CSS (no frameworks or libraries).
