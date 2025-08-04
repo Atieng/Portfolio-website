@@ -93,6 +93,6 @@ This project is open source and available under the [MIT License](LICENSE).
 **Ivy Atieng**  
 📧 [your.email@example.com](mailto:stiengivylisa@gmail.com)  
 🔗 [linkedin.com/in/yourprofile](https://linkedin.com/in/ivy-atieng-a5a52b350/)
-- **Hosting**: [Your hosting provider]
+- **Hosting**: [https://atieng.github.io/Portfolio-website/]
 
-## 📂 Project Structure
+ 
