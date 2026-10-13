@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/*
+  Design system
+  ─────────────
+  Charcoal base with three accents, each tied to one area of work:
+  lavender = data science, mint = full-stack, pink = design.
+  The accents are used for meaning (category, links, focus), not decoration.
+*/
+@theme {
+  --color-ink: #121214;        /* page background */
+  --color-panel: #1a1a1e;      /* cards */
+  --color-raised: #222227;     /* hover / nested surfaces */
+  --color-line: #2d2d34;       /* borders */
+  --color-text: #eceaf1;
+  --color-dim: #a6a3b0;        /* secondary text, 7:1 on ink */
+
+  --color-lavender: #b8a6f6;
+  --color-mint: #8fe2bf;
+  --color-pink: #f3a8c4;
+
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 1.25rem;
+  --radius-tile: 0.75rem;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; color-scheme: dark; }
+  body {
+    @apply bg-ink text-text font-sans antialiased;
+    font-size: 16.5px;
+    line-height: 1.6;
+  }
+  ::selection { background: var(--color-lavender); color: var(--color-ink); }
+  :focus-visible {
+    outline: 2px solid var(--color-mint);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; }
+  p { text-wrap: pretty; }
+}
+
+/* The one orchestrated entrance: hero lines rise in sequence on first load. */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+.rise { animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+
+/* Asymmetric homepage grid. Named areas keep the composition readable. */
+.bento {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "featured" "data" "dev" "design" "about" "skills" "connect";
+}
+@media (min-width: 700px) {
+  .bento {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      "featured featured featured featured featured featured"
+      "data data data dev dev dev"
+      "design design about about about about"
+      "skills skills skills skills connect connect";
+  }
+}
+@media (min-width: 1100px) {
+  .bento {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "featured featured featured featured featured featured featured data data data data data"
+      "featured featured featured featured featured featured featured dev dev dev dev dev"
+      "featured featured featured featured featured featured featured design design design design design"
+      "about about about about skills skills skills skills skills connect connect connect";
+  }
+}
+
+/* Placeholder surfaces: obviously temporary, never mistaken for real work. */
+.placeholder-surface {
+  background-image: radial-gradient(color-mix(in oklab, var(--accent, #a6a3b0) 35%, transparent) 1px, transparent 1.2px);
+  background-size: 14px 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,98 +1,74 @@
-# Ivy Atieng - Portfolio Website
+# Portfolio: Data. Development. Design.
 
- 
+Personal portfolio built with Next.js, React, TypeScript, Tailwind CSS and Lucide icons. Hosted on Vercel.
 
-## 🚀 Overview
-A modern, responsive portfolio website showcasing my skills as a Data Scientist and AI Developer. Built with pure HTML and CSS (no frameworks or libraries).
+## Run it locally
 
-## ✨ Features
-- Fully responsive design
-- Clean, modern UI
-- Interactive elements with smooth animations
-- Organized project showcase
-- Contact form functionality
-- Optimized for performance
+Requires [Node.js](https://nodejs.org) 20 or newer.
 
-## 🛠 Development Process
+```bash
+npm install
+npm run dev
+```
 
-### 1. Design Phase (Using Relume)
-- Used [Relume](https://www.relume.io/app/project/P898505_qu2a2spEcYvA38_-wG5wUCziTW6wWF5PjyAXkr2iwEk#mode=sitemap) for initial design inspiration and component library
-- Created wireframes and style guides
-- Established color palette and typography hierarchy
-- Designed responsive layouts for all screen sizes
+Open http://localhost:3000. Run `npm run build` before deploying to catch errors.
 
-### 2. Project Management (Using Trello)
-- Organized tasks using  with columns:
-  - **To Do**: Initial planning and research
-  - **In Progress**: Active development tasks
-  - **Review**: Completed items needing feedback
-  - **Done**: Finished and approved components
-- Used checklists for each component (header, hero section, etc.)
-- Set deadlines for each development phase
+## Where to edit things
 
-### 3. Development Workflow
-1. **Setup**:
-   - Created project structure
-   - Established CSS variables for consistent styling
-   - Set up responsive breakpoints
+| What | File |
+| --- | --- |
+| Name, email, links, photo, resume, intro, about text, timeline, skills | `data/site.ts` |
+| Projects and case studies | `data/projects.ts` |
+| Design gallery pieces | `data/gallery.ts` |
+| Colours, fonts, homepage grid layout | `app/globals.css` |
 
-2. **Component Development**:
-   - Built each section sequentially:
-     - Navigation bar
-     - Hero section
-     - About section
-     - Skills showcase
-     - Education timeline
-     - Projects grid
-     - Contact form
-     - Footer
+### Placeholders
 
-3. **Testing**:
-   - Cross-browser testing (Chrome)
-   - Mobile responsiveness testing
-   - Performance optimization
+Any text that starts with `TODO:` appears on the site as a dashed grey box, and any link with an empty `href` shows as "(add link)". That way, missing information is always obvious and never looks like a real claim. Replace them all before sharing the site. To find them, search the `data` folder for `TODO`.
 
-4. **Deployment**:
-   - Final quality checks
-   - Optimized assets
-   - Deployed to hosting platform
+### Images
 
-## 🧰 Technologies Used
-- **Frontend**: HTML5, CSS3
-- **Design Tools**: Relume, Figma (for mockups)
-- **Project Management**: Trello
-- **Version Control**: Git/GitHub
+- **Project screenshots:** put them in `public/projects/<project-slug>/` and set `cover.src` (or `src` inside a section's `images`) in `data/projects.ts`, e.g. `"/projects/neudata/home.png"`.
+- **Gallery pieces:** put them in `public/gallery/` and set `image.src`, `width` and `height` in `data/gallery.ts`.
+- **Your photo:** put it in `public/` and set `photo` in `data/site.ts`.
+- **Resume:** save it as `public/resume.pdf` and set `resume: "/resume.pdf"` in `data/site.ts`.
 
-  portfolio/
-├── index.html # Main HTML file
-├── style.css # All CSS styles
-├── assets/ # Asset directory
-│ ├── images/ # All project images
-│ └── documents/ # PDFs and other documents
-└── README.md # This documentation file
+Until an image is added, a labelled placeholder frame shows instead.
 
+### Adding a project
 
-## 🚧 Future Improvements
-- [ ] Add dark mode toggle
-- [ ] Implement form submission functionality
-- [ ] Add project filtering system
-- [ ] Include blog section
-- [ ] Add more interactive animations
+Copy an entry in `data/projects.ts`, give it a new `slug` (this becomes its web address, `/projects/<slug>`), and set `category` to `"data"`, `"fullstack"` or `"design"`. It appears on the Projects page and in the right filter automatically. Set `featured: true` on the one project you want on the homepage.
 
-## 📄 License
-This project is open source and available under the [MIT License](LICENSE).
+## Contact form (optional)
 
-## 🙏 Acknowledgments
-- Relume for design inspiration
-- Unsplash for stock images
-- Font Awesome for icons
-- All mentors and colleagues who provided feedback
+The contact page shows your email and profile links. The message form is hidden until it's connected to a real service, so it never pretends to send.
 
----
+To turn it on:
 
-**Ivy Atieng**  
-📧 [your.email@example.com](mailto:stiengivylisa@gmail.com)  
-🔗 [linkedin.com/in/yourprofile](https://linkedin.com/in/ivy-atieng-a5a52b350/)
-- **Hosting**: [https://atieng.github.io/Portfolio-website/]
+1. Create a free form at [formspree.io](https://formspree.io) and copy its ID (the part after `/f/`).
+2. In Vercel, open your project's **Settings → Environment Variables** and add `NEXT_PUBLIC_FORMSPREE_ID` with that ID.
+3. Redeploy.
 
- 
+For local testing, put `NEXT_PUBLIC_FORMSPREE_ID=yourid` in a file called `.env.local`.
+
+## Deploy to Vercel
+
+```bash
+git init
+git add .
+git commit -m "Portfolio"
+git branch -M main
+git remote add origin https://github.com/YOUR-USERNAME/portfolio.git
+git push -u origin main
+```
+
+On vercel.com choose **Add New → Project**, pick the repository, and click **Deploy**. Every push to `main` redeploys the site. Afterwards, set `url` in `data/site.ts` to your live address so link previews work.
+
+## Structure
+
+```
+app/                 Pages: home, projects, projects/[slug], about, design, contact
+components/          Reusable pieces: ProjectCard, ProjectBrowser (filters), Gallery (lightbox), Header, etc.
+data/                All content
+lib/                 Types, category colours, placeholder helpers
+```
