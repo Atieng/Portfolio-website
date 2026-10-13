@@ -124,7 +124,7 @@ export const projects: Project[] = [
     category: "fullstack",
     summary: "A website for Neudata, presenting data services for small and medium-sized businesses.",
     year: "TODO: Year",
-    role: "TODO: Your role, e.g. designed and built the whole site",
+    role: "Full-stack developer and system designer",
     status: "TODO: In development / Live",
     cover: {
       alt: "TODO: Describe the screenshot, e.g. the Neudata homepage",
@@ -148,8 +148,16 @@ export const projects: Project[] = [
         list: ["TODO: Feature 1", "TODO: Feature 2"],
       },
       {
+        heading: "My role",
+        body: [
+          "I worked on Neudata as a full-stack developer and system designer, which meant planning how the parts of the system fit together as well as building them.",
+          "TODO: Was this a team project? Who else was involved, and which parts did you own?",
+        ],
+      },
+      {
         heading: "How it's built",
-        body: ["TODO: Front end, back end, database and hosting, and how they fit together."],
+        body: ["TODO: Front end, back end, database and hosting, and how they fit together. A simple diagram works well here."],
+        images: [{ alt: "TODO: System design diagram", caption: "Add your system design diagram" }],
       },
       {
         heading: "Decisions worth mentioning",
@@ -170,5 +178,51 @@ export const projects: Project[] = [
     ],
   },
 ];
+
+projects.push({
+  slug: "gkash",
+  title: "Gkash",
+  category: "design",
+  summary: "UI/UX design for the Gkash project.",
+  year: "TODO: Year",
+  role: "UI/UX designer",
+  status: "TODO: Completed / In progress",
+  cover: {
+    alt: "TODO: Describe the screens",
+    caption: "Add your key Gkash screens",
+  },
+  tech: ["TODO: Tools you used, e.g. Figma"],
+  links: [{ label: "Figma prototype", href: "" }],
+  sections: [
+    {
+      heading: "Overview",
+      body: [
+        "I was the UI/UX designer on Gkash.",
+        "TODO: One or two sentences on what Gkash is and who it's for.",
+      ],
+    },
+    {
+      heading: "The problem",
+      body: ["TODO: What users struggled with, or what the product needed to make easy."],
+    },
+    {
+      heading: "Research and process",
+      body: ["TODO: How you learned about users (interviews, surveys, competitor review) and how the design evolved: sketches, wireframes, testing."],
+      images: [
+        { alt: "TODO: Wireframes", caption: "Add early wireframes or sketches" },
+        { alt: "TODO: User flow", caption: "Add a user flow" },
+      ],
+    },
+    {
+      heading: "Final design",
+      body: ["TODO: The key screens, and the design decisions behind them: layout, colour, type, components."],
+      images: [{ alt: "TODO: Final screens", caption: "Add the final screens" }],
+    },
+    {
+      heading: "What I learned",
+      body: ["TODO: Feedback you got, what changed because of it, and what you'd do differently."],
+    },
+  ],
+});
 
 export const featuredProject = projects.find((p) => p.featured) ?? projects[0];

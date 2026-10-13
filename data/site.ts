@@ -7,20 +7,20 @@ import type { TimelineItem } from "@/lib/types";
 
 export const site = {
   name: "Ivyne Atieng",
-  url: "https://your-site.vercel.app", // TODO: your Vercel address, used for social previews
+  url: "https://portfolio-website.vercel.app", // TODO: change to your real Vercel address once it's live
 
-  email: "", // TODO: your email. While empty, email buttons are hidden.
-  github: "", // TODO: e.g. "https://github.com/your-username"
-  linkedin: "", // TODO: e.g. "https://www.linkedin.com/in/your-username"
+  email: "atiengivylisa@gmail.com",
+  github: "https://github.com/Atieng",
+  linkedin: "https://www.linkedin.com/in/ivy-atieng-a5a52b350/",
   otherLinks: [
-    // { label: "Kaggle", href: "https://www.kaggle.com/your-username" },
+    { label: "X", href: "https://x.com/vylee_ai" },
   ] as { label: string; href: string }[],
 
-  /** Put the PDF in /public and set this to "/resume.pdf". While null, resume links are hidden. */
-  resume: null as string | null,
+  /** The PDF lives in /public. Set to null to hide resume links. */
+  resume: "/resume.pdf" as string | null,
 
-  /** Put a photo in /public and set this, e.g. { src: "/me.jpg", alt: "Ivyne smiling, outdoors in Nairobi" }. */
-  photo: null as { src: string; alt: string } | null,
+  /** The photo lives in /public. Describe it in alt for screen readers. */
+  photo: { src: "/me.jpg", alt: "Portrait of Ivyne Atieng" } as { src: string; alt: string } | null,
 
   /** Shown on the "Let's connect" card. Edit to say what you're actually looking for. */
   availability: "Open to internships, collaborations and conversations about data or design.",
@@ -33,7 +33,7 @@ export const site = {
 
   about: {
     intro: [
-      "I'm studying Computer Science, and I've found that the problems I enjoy most sit between data, software and design. A model is more useful when someone can actually use it, and an app is better when it's built around real evidence.",
+      "I'm studying Computer Science at JKUAT, and I've found that the problems I enjoy most sit between data, software and design. A model is more useful when someone can actually use it, and an app is better when it's built around real evidence.",
       "TODO: A sentence or two in your own words about how you got into tech, and what keeps you interested.",
     ],
     approach: [
@@ -45,16 +45,26 @@ export const site = {
   },
 
   education: [
-    { when: "TODO: Years", title: "TODO: Degree, e.g. BSc Computer Science", place: "TODO: University name" },
+    {
+      when: "2024 to 2028",
+      title: "BSc Computer Science",
+      place: "Jomo Kenyatta University of Agriculture and Technology (JKUAT)",
+    },
   ] as TimelineItem[],
 
   training: [
-    { when: "TODO: Year", title: "TODO: Data science programme or course", place: "TODO: Provider" },
-    { when: "TODO: Year", title: "TODO: Certification", place: "TODO: Issuer" },
+    {
+      when: "TODO: Year",
+      title: "Data Science short course: Data Analytics and Visualisation",
+      place: "Moringa School",
+    },
   ] as TimelineItem[],
 
+  // Newest first. Add the year to each "when" when you can.
   community: [
-    { when: "TODO: Year", title: "TODO: Role, e.g. member, organiser, volunteer", place: "TODO: Club, community or event" },
+    { when: "TODO: Year", title: "Data Science Tech Lead", place: "GDG on Campus JKUAT" },
+    { when: "TODO: Year", title: "Scrum Master", place: "TODO: Name of the capstone project" },
+    { when: "TODO: Year", title: "Volunteer", place: "Tech Interactive volunteer programme" },
   ] as TimelineItem[],
 
   // Only keep what you can genuinely explain or demonstrate in an interview.
