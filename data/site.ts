@@ -6,7 +6,7 @@ import type { TimelineItem } from "@/lib/types";
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const site = {
-  name: "Ivyne Atieng",
+  name: "Ivy Atieng",
   url: "https://portfolio-website.vercel.app", // TODO: change to your real Vercel address once it's live
 
   email: "atiengivylisa@gmail.com",
@@ -20,7 +20,7 @@ export const site = {
   resume: "/resume.pdf" as string | null,
 
   /** The photo lives in /public. Describe it in alt for screen readers. */
-  photo: { src: "/me.jpg", alt: "Portrait of Ivyne Atieng" } as { src: string; alt: string } | null,
+  photo: { src: "/me.jpg", alt: "Portrait of Ivy Atieng" } as { src: string; alt: string } | null,
 
   /** Shown on the "Let's connect" card. Edit to say what you're actually looking for. */
   availability: "Open to internships, collaborations and conversations about data or design.",
@@ -54,7 +54,7 @@ export const site = {
 
   training: [
     {
-      when: "TODO: Year",
+      when: "Feb to Oct 2024",
       title: "Data Science short course: Data Analytics and Visualisation",
       place: "Moringa School",
     },
@@ -62,9 +62,9 @@ export const site = {
 
   // Newest first. Add the year to each "when" when you can.
   community: [
-    { when: "TODO: Year", title: "Data Science Tech Lead", place: "GDG on Campus JKUAT" },
+    { when: "Sep 2025 to Jul 2026", title: "Data Science Tech Lead", place: "GDG on Campus JKUAT" },
     { when: "TODO: Year", title: "Scrum Master", place: "TODO: Name of the capstone project" },
-    { when: "TODO: Year", title: "Volunteer", place: "Tech Interactive volunteer programme" },
+    { when: "2025", title: "Volunteer Judge, Kenya Tech Challenge 2025", place: "The Tech Interactive", note: "Evaluated student innovations in the Drop & Dash STEM challenge." },
   ] as TimelineItem[],
 
   // Only keep what you can genuinely explain or demonstrate in an interview.
