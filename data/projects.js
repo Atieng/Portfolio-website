@@ -54,6 +54,21 @@ export const projects = [
     tools: "Python, NLTK, scikit-learn, XGBoost, TensorFlow, Streamlit",
     images: [],
   },
+  {
+    title: "Project name",
+    role: "Frontend · React · Personal project",
+    note: "One short line, such as the year or the result",
+    body: [
+      "What it does and who it is for.",
+      "What you built, and one thing you learned or fixed.",
+    ],
+    links: [
+      { label: "live site", href: "https://..." },
+      { label: "github", href: "https://github.com/Atieng/..." },
+    ],
+    tools: "React, TypeScript, Tailwind",
+    images: [],
+  },
 ];
 
 export const experience = [
