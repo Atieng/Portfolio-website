@@ -1,7 +1,7 @@
 // Edit this file to change your name, links and About text.
 // Anything starting with TODO shows as a yellow "add" tag on the page.
 export const site = {
-  name: "Ivy Atieno",
+  name: "Ivy Atieng",
   headline: "Data scientist, UI/UX designer, frontend contributor",
   intro:
     "I build models that get tested against reality, and I report what went wrong as plainly as what went right. Based in Nairobi.",
