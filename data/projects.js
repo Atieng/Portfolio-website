@@ -18,8 +18,8 @@ export const projects = [
       ["group exits", "12 of 16 correct"],
     ],
     links: [
-      { label: "live app", href: "TODO" },
-      { label: "medium write-up", href: "TODO" },
+      { label: "live app", href: "PASTE_URL" },
+      { label: "medium write-up", href: "PASTE_URL" },
       { label: "github", href: "TODO" },
     ],
     tools: "Python, pandas, scikit-learn, Streamlit, joblib",
