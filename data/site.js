@@ -8,6 +8,7 @@ export const site = {
   resume: "TODO", // later: "/resume.pdf" (put the file in public/)
   email: "you@example.com",
   github: "https://github.com/Atieng",
+  x: "https://x.com/vylee_ai",
   linkedin: "https://www.linkedin.com/in/your-name",
   currently: "Learning X and building Y",
   about: [

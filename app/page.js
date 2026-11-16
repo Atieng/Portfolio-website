@@ -125,6 +125,8 @@ export default function Home() {
             <a href={site.github}>github</a>
             {" · "}
             {isTodo(site.linkedin) ? <span className="ph">add linkedin</span> : <a href={site.linkedin}>linkedin</a>}
+            {" · "}
+            <a href={site.x}>x</a>
           </p>
         </div>
       </footer>
