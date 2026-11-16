@@ -1,19 +1,16 @@
-import { Bricolage_Grotesque, IBM_Plex_Sans } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const display = Bricolage_Grotesque({ subsets: ["latin"], weight: ["500", "700", "800"], variable: "--font-display" });
-const body = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-body" });
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata = {
-  title: "Ivy Atieng – Data scientist & aspiring AI developer",
-  description: "Portfolio of Ivy Atieng: machine learning, NLP and data analysis projects built in Python.",
+  title: "Ivy Atieno · Portfolio",
+  description: "Data scientist, UI/UX designer and frontend contributor based in Nairobi.",
 };
-
-export const viewport = { width: "device-width", initialScale: 1, viewportFit: "cover" };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
+    <html lang="en" className={mono.variable}>
       <body>{children}</body>
     </html>
   );
