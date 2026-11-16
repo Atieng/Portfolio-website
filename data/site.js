@@ -6,10 +6,10 @@ export const site = {
   intro:
     "I build models that get tested against reality, and I report what went wrong as plainly as what went right. Based in Nairobi.",
   resume: "TODO", // later: "/resume.pdf" (put the file in public/)
-  email: "TODO",
+  email: "you@example.com",
   github: "https://github.com/Atieng",
-  linkedin: "TODO",
-  currently: "TODO: one line on what you are learning or building now",
+  linkedin: "https://www.linkedin.com/in/your-name",
+  currently: "Learning X and building Y",
   about: [
     "TODO: 2 or 3 sentences on how you got into tech",
     "TODO: how you approach a new problem, and the role you want next",
